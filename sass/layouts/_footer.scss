@@ -1,0 +1,71 @@
+.footer-1 {
+  @include flex(space-evenly, center);
+  height: 20rem;
+  background-color: var(--Grey-light-1);
+  flex-direction: column;
+
+  p {
+    font-size: 2rem;
+    color: var(--Grey-dark-3);
+    font-weight: 300;
+    @include responsive(600px) {
+      font-size: 1.5rem;
+    }
+  }
+  .footer__button {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    padding: 3rem 12rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    cursor: poiner;
+    span {
+      background: transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.15s ease;
+    }
+  }
+  .footer__button:hover {
+    background-image: linear-gradient(
+      to left top,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+
+  .footer__button::before {
+    content: "ONLY 4 ROOMS LEFT";
+    cursor: pointer;
+
+    transition: all 0.15s ease;
+    background-image: transparent;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    color: white;
+  }
+  .footer__button:hover::before {
+    top: 0;
+  }
+  .footer__button:hover span {
+    top: 150%;
+  }
+  .footer__button:focus,
+  .footer__button:active {
+    animation: footer__button 1s alternate ease infinite;
+  }
+}

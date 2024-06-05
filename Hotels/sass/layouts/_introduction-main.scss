@@ -1,0 +1,539 @@
+.introduction {
+  text-decoration: none;
+  min-height: 100rem;
+
+  &__main {
+    background-color: var(--Grey-light-1);
+    position: relative;
+   
+    .page-transition {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: 33.5%;
+      z-index: 5;
+    }
+    .page-transition1 {
+      background-color: var(--color-primary);
+    }
+    .page-transition2 {
+      z-index: 4;
+      background-color: var(--color-primary-dark);
+    }
+    .page-transition3 {
+      z-index: 3;
+      background-color: var(--color-primary-light);
+    }
+
+    #this-feature-is-not-developed {
+      position: fixed;
+      height: 50rem;
+      width: 70%;
+      z-index: 100000;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary-dark)
+      );
+      border-radius: 2rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      color: white;
+      padding: 4rem;
+      overflow: hidden;
+      font-weight: 300;
+      scale: 0.7;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.5, 0.17, 0.03, 1.67);
+      pointer-events: none;
+      @include responsive(950px) {
+        padding: 3rem;
+      }
+      @include responsive(600px) {
+        width: 65rem;
+        padding: 2rem;
+        height: 70rem;
+      }
+      h1 {
+        font-size: 2rem;
+        // line-height: 4rem;
+        margin-top: 3rem;
+        @include responsive(600px) {
+          font-size: 2.5rem;
+          font-weight: 300;
+          line-height: 5rem;
+        }
+      }
+      .animation-container {
+        svg {
+          height: 35rem;
+          position: absolute;
+          bottom: 0;
+          right: -20rem;
+          @include responsive(950px) {
+            right: -35rem;
+            height: 30rem;
+          }
+          @include responsive(600px) {
+            right: -48rem;
+            height: 35rem;
+          }
+          @include responsive(400px) {
+            right: -50rem;
+          }
+          #right-hand {
+            transform-origin: center;
+            animation: hands infinite 0.75s alternate ease;
+          }
+          #left-hand {
+            animation: hands infinite 0.5s alternate ease;
+          }
+          #right-foot {
+            transform-origin: center;
+            animation: foot infinite 2s alternate ease 2s;
+          }
+          #square1 {
+            animation: squares infinite 1s ease;
+          }
+          #square2 {
+            animation: squares infinite 1s ease 0.5s;
+          }
+          #square3 {
+            animation: squares infinite 1s ease 0.75s;
+          }
+        }
+        .close {
+          font-size: 2.5rem;
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+          position: absolute;
+          top: 1.5rem;
+          right: 3rem;
+          font-weight: bold;
+        }
+      }
+    }
+    #this-feature-is-not-developed.active-popUp {
+      pointer-events: all;
+
+      scale: 1;
+      top: 50%;
+      opacity: 1;
+      transition: all 0.5s cubic-bezier(0.5, 0.17, 0.03, 1.67);
+    }
+    ////////////////////////////////////////////////////////////////////////////////////
+    /// offers
+
+    .offers {
+      padding: 1.5rem 3rem;
+      position: relative;
+      .next-offer {
+        right: 2.5rem;
+      }
+      .previous-offer {
+        left: 2rem;
+      }
+      .offer-navigation {
+        z-index: 2;
+        @include flex(center, center);
+        height: 3rem;
+        width: 3rem;
+        background-color: white;
+        position: absolute;
+        font-size: 1rem;
+        border-radius: 50%;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+        top: 65%;
+        transform: translateY(-65%);
+        @include responsive(800px) {
+          display: none;
+        }
+      }
+
+      &__tilte {
+        h1 {
+          font-size: 3rem;
+          font-weight: 300;
+        }
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      &__card-container {
+        @include flex(unset, unset);
+        overflow: hidden;
+        .offers__card {
+          border: 1px solid rgba(128, 128, 128, 0.319);
+          border-radius: 2rem;
+          min-height: 15rem;
+          padding: 1rem;
+          flex: 0 0 48%;
+          transition: all 0.7s ease;
+          @include responsive(800px) {
+            flex: 0 0 70%;
+          }
+          @include flex(space-evenly, center);
+          &-introduction {
+            p {
+              padding: 1rem 0;
+              font-size: 1.3rem;
+            }
+            button {
+              padding: 1rem 1rem;
+              cursor: pointer;
+              font-size: 1rem;
+              color: white;
+              border: none;
+              border-radius: 0.5rem;
+              background-color: var(--color-primary);
+              a {
+                color: white;
+                text-decoration: none;
+              }
+            }
+          }
+          &-image {
+            display: inline-block;
+            width: 20%;
+            img {
+              width: 100%;
+              height: 80%;
+            }
+          }
+        }
+        .offers__card-1 {
+        }
+        .offers__card-2 {
+          padding: 1rem;
+          margin: 0 3%;
+        }
+        .offers__card-3 {
+          position: relative;
+          overflow: hidden;
+          .offers__card-introduction {
+            p,
+            h2 {
+              color: white;
+            }
+            z-index: 5;
+          }
+          .offers__card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    /// trip idea
+
+    .trip-idea {
+      padding: 1.5rem 3rem;
+      max-width: 100%;
+      background-color: var(--Grey-light-1);
+      &__title {
+        margin: 1rem 0;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      &__container {
+        max-width: 100%;
+        max-height: 28rem;
+        @include flex(unset, stretch);
+
+        .trip-figure {
+          border: 1px solid rgba(128, 128, 128, 0.319);
+          border-radius: 2rem;
+          height: 100%;
+          display: flex;
+          color: var(--Grey-dark-2);
+          overflow: hidden;
+          p {
+            margin: 0.5rem 0;
+            font-size: 1.6rem;
+            color: black;
+            font-weight: bold;
+            @include responsive(450px) {
+              font-size: 1.3rem;
+            }
+          }
+          figcaption {
+            margin: 1rem;
+          }
+        }
+        &-1 {
+          img {
+            height: 75%;
+            width: 100%;
+            object-fit: cover;
+          }
+          flex: 0 0 49%;
+          margin-right: auto;
+          // background-color: rgb(183, 183, 255);
+          .trip-idea--1 {
+            flex-direction: column;
+          }
+        }
+        &-2 {
+          figure {
+            height: 45% !important;
+          }
+          img {
+            height: 100%;
+            width: 15%;
+            object-fit: cover;
+          }
+          // background-color: rgb(255, 191, 183);
+          flex: 0 0 45%;
+          @include flex(space-between, stretch);
+          flex-direction: column;
+        }
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    /// HOTELS OPTION SEARCH BAR
+    .location-search {
+      background-color: var(--Grey-light-1);
+
+      padding: 1.5rem 3rem;
+      min-height: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      &__title {
+        align-content: center;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 300;
+        @include responsive(600px) {
+        }
+      }
+      &__filters {
+        @include flex(space-around, center);
+        flex-wrap: wrap;
+        .filter-container {
+          max-height: 70%;
+          flex: 0 0 25%;
+          @include flex(unset, center);
+          font-size: 1.3rem;
+          padding: 1rem;
+          border: 1px solid rgba(55, 55, 55, 0.593);
+          border-radius: 1rem;
+          @include responsive(600px) {
+            flex: 1 1 40rem;
+            margin: 1rem;
+          }
+          p {
+            margin-left: 1rem;
+          }
+          cursor: pointer;
+        }
+        .filter__search-btn {
+          padding: 1rem 4rem;
+          cursor: pointer;
+          font-size: 1.5rem;
+          color: white;
+          border-radius: 3rem;
+          border: none;
+          background-color: var(--color-primary);
+          @include responsive(600px) {
+            flex: 1 1 40rem;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////
+    /// HOTELS CARD LIST AND MAP
+    .hotels {
+      background-color: var(--Grey-light-3);
+
+      display: flex;
+      padding: 2rem;
+      position: relative;
+
+      &__list {
+        flex: 0 0 49%;
+        margin-right: auto;
+        height: 100%;
+        @include responsive(700px) {
+          flex: 0 0 100%;
+        }
+
+        &__filter {
+          height: 3%;
+
+          font-size: 1.5rem;
+          @include flex(unset, center);
+          label {
+            margin-right: 1rem;
+          }
+          select {
+            border: 0.1rem solid gray;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+          }
+        }
+        &__cards {
+          height: 97%;
+
+          .card {
+            .bookmark-icon {
+              position: absolute;
+              right: 1rem;
+              bottom: 1rem;
+              height: 3rem;
+              cursor: pointer;
+              pointer-events: all;
+              // z-index: 10;
+            }
+            .bookmark-icon-acvive {
+              fill: var(--color-primary);
+            }
+            box-shadow: var(--shadow-noraml-1);
+            background-color: var(--Grey-light-1);
+            margin: 1rem 0rem;
+            position: relative;
+            @include flex(unset, stretch);
+            height: 12rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            .card__img {
+              margin-right: 2rem;
+              width: 35%;
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .card__introduction {
+              @include flex(space-evenly, unset);
+              flex-direction: column;
+              &__rating {
+                span {
+                  margin-right: 0.5rem;
+                }
+                @include flex(unset, center);
+                svg {
+                  height: 2rem;
+                }
+              }
+              &__button {
+                align-self: flex-start;
+                padding: 0.5rem 2rem;
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: white;
+                border-radius: 2rem;
+                border: none;
+                background-color: var(--color-primary);
+              }
+            }
+          }
+        }
+
+        &__pages {
+          // background-color: antiquewhite;
+          @include flex(space-between, center);
+          margin: 2rem 0;
+          button:not(.show-map) {
+            border: none;
+            padding: 0.4rem 0.5rem;
+            color: white;
+            background-color: var(--Grey-dark-2);
+            border-radius: 1rem;
+            @include flex(center, center);
+            svg {
+              fill: white;
+              flex: 0 0 50%;
+            }
+            span {
+              flex: 0 0 50%;
+            }
+          }
+          .show-map {
+            opacity: 0;
+            border: none;
+            color: white;
+            background-color: var(--color-primary);
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            @include flex(unset, center);
+            * {
+              pointer-events: none;
+            }
+            svg {
+              fill: white;
+              height: 1.7rem;
+              margin-left: 0.5rem;
+            }
+            @include responsive(700px) {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &__map {
+        flex: 0 0 49%;
+        /* glass effect*/
+        background: rgba(255, 255, 255, 0.656);
+        border-radius: 16px;
+
+        @include responsive(700px) {
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(7.1px);
+          -webkit-backdrop-filter: blur(7.1px);
+          border: 1px solid rgba(255, 255, 255, 0.23);
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+          z-index: 100;
+          top: 0;
+          left: 0;
+          // opacity: 0;
+          // pointer-events: none;
+        }
+
+        #map {
+          margin-top: 3rem;
+          height: 50rem;
+          background-color: rgb(255, 255, 255);
+          position: sticky;
+          top: 0;
+          border-radius: 3rem;
+          @include responsive(700px) {
+            height: 80%;
+            width: 80%;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 0.2rem rgba(78, 78, 78, 0.679) solid;
+          }
+        }
+      }
+    }
+  }
+}

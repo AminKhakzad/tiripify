@@ -1,0 +1,328 @@
+.introduction {
+  &__main--1 {
+    #this-feature-is-not-developed {
+      position: fixed;
+      height: 50rem;
+      width: 70%;
+      z-index: 100000;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-image: linear-gradient(
+        to right bottom,
+        var(--color-primary-light),
+        var(--color-primary-dark)
+      );
+      border-radius: 2rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      color: white;
+      padding: 4rem;
+      overflow: hidden;
+      font-weight: 300;
+      scale: 0.7;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.5, 0.17, 0.03, 1.67);
+      pointer-events: none;
+      @include responsive(950px) {
+        padding: 3rem;
+      }
+      @include responsive(600px) {
+        width: 65rem;
+        padding: 2rem;
+        height: 70rem;
+      }
+      h1 {
+        font-size: 2rem;
+        // line-height: 4rem;
+        margin-top: 3rem;
+        @include responsive(600px) {
+          font-size: 2.5rem;
+          font-weight: 300;
+          line-height: 5rem;
+        }
+      }
+      .animation-container {
+        svg {
+          height: 35rem;
+          position: absolute;
+          bottom: 0;
+          right: -20rem;
+          @include responsive(950px) {
+            right: -35rem;
+            height: 30rem;
+          }
+          @include responsive(600px) {
+            right: -48rem;
+            height: 35rem;
+          }
+          @include responsive(400px) {
+            right: -50rem;
+          }
+          #right-hand {
+            transform-origin: center;
+            animation: hands infinite 0.75s alternate ease;
+          }
+          #left-hand {
+            animation: hands infinite 0.5s alternate ease;
+          }
+          #right-foot {
+            transform-origin: center;
+            animation: foot infinite 2s alternate ease 2s;
+          }
+          #square1 {
+            animation: squares infinite 1s ease;
+          }
+          #square2 {
+            animation: squares infinite 1s ease 0.5s;
+          }
+          #square3 {
+            animation: squares infinite 1s ease 0.75s;
+          }
+        }
+        .close {
+          font-size: 2.5rem;
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+          position: absolute;
+          top: 1.5rem;
+          right: 3rem;
+          font-weight: bold;
+        }
+      }
+    }
+    #this-feature-is-not-developed.active-popUp {
+      pointer-events: all;
+
+      scale: 1;
+      top: 50%;
+      opacity: 1;
+      transition: all 0.5s cubic-bezier(0.5, 0.17, 0.03, 1.67);
+    }
+  }
+  .gallery {
+    display: flex;
+    height: 28vh;
+    width: 100%;
+    img {
+      width: 33.333333%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    @include flex(unset, center);
+    background-color: var(--Grey-light-2);
+    height: 7rem;
+    width: 100%;
+    box-shadow: 0 0.1rem 1rem rgba(96, 96, 96, 0.304);
+    position: relative;
+    color: var(--color-primary);
+
+    h1 {
+      margin: 0 3rem;
+      font-weight: 300;
+      color: var(--Grey-dark-2);
+      letter-spacing: 0.3rem;
+      text-align: center;
+      @include responsive(400px) {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__stars {
+    margin-right: auto;
+    fill: var(--color-primary);
+    display: flex;
+
+    svg {
+      @include responsive(600px) {
+        height: 2rem;
+      }
+    }
+  }
+  &__hotel-location {
+    align-self: stretch;
+    @include flex(center, center);
+    padding: 0 2rem;
+    color: currentColor;
+    min-width: fit-content;
+    @include responsive(400px) {
+      min-width: 0px;
+      padding: 0 1rem;
+    }
+    svg {
+      fill: currentColor;
+    }
+
+    a {
+      box-decoration-break: clone;
+      padding: 0.5rem;
+      color: currentColor;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-bottom: 0.1rem solid currentColor;
+      padding-bottom: 0.2rem;
+      line-height: 2rem;
+      line-break: loose;
+    }
+    a:focus,
+    a:active {
+      animation: hotel-location__button 1s alternate ease infinite;
+    }
+  }
+
+  &__hotel-rating {
+    text-align: center;
+    background-color: var(--color-primary);
+    height: 100%;
+    align-content: center;
+    padding: 2rem;
+    color: white;
+
+    span {
+      font-size: 2.5rem;
+    }
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////
+  // introduction__discrtiption
+
+  &__discription {
+    padding: 3rem;
+    @include responsive(600px) {
+      padding: 1.5rem;
+    }
+    // background-color: rgb(161, 161, 255);
+    @include flex(unset, stretch);
+
+    ///////////////
+    // main discription
+    .discription {
+      box-shadow: var(--shadow-dark-2);
+
+      font-size: 1.4rem;
+      color: var(--Grey-dark-2);
+      margin-right: 3rem;
+      @include responsive(900px) {
+        margin-right: 1rem;
+      }
+
+      padding: 2rem;
+      background-color: rgb(255, 255, 255);
+      @include flex(unset, default);
+      flex-direction: column;
+
+      &__paragraph p:last-child {
+        margin: 2rem 0;
+      }
+      &__list {
+        text-align: center;
+        padding: 1rem 0;
+        margin: 1rem 0;
+        ul {
+          @include flex(default, default);
+          flex-wrap: wrap;
+          list-style: none;
+        }
+        border-bottom: 0.1rem solid rgba(109, 109, 109, 0.15);
+        border-top: 0.1rem solid rgba(109, 109, 109, 0.15);
+      }
+      &__item {
+        flex: 0 0 50%;
+        margin: 0.7rem 0;
+      }
+      &__item::before {
+        content: " ";
+        height: 1rem;
+        display: inline-block;
+        width: 1rem;
+        mask-image: url(../../img/chevron-thin-right.svg);
+        mask-size: cover;
+        background-color: var(--color-primary);
+      }
+      ///////////////
+      // main recommendation
+      &__recommendation {
+        @include flex(space-between, center);
+        text-align: center;
+        &__gallery {
+          display: flex;
+          img {
+            height: 4rem;
+            border-radius: 50%;
+            border: 0.2rem solid white;
+          }
+          img:not(:last-child) {
+            margin-right: -1rem;
+          }
+        }
+      }
+    }
+
+    ///////////////
+    // discription notes container
+    .notes {
+      @include flex(center, default);
+      flex-direction: column;
+      .note {
+        box-shadow: var(--shadow-dark-2);
+        font-size: 1.4rem;
+        color: var(--Grey-dark-2);
+        margin-bottom: 2rem;
+        @include flex(center, default);
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        padding: 1rem;
+        position: relative;
+        svg {
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          fill: var(--Grey-dark-2);
+          opacity: 0.7;
+          z-index: 0;
+        }
+        &__user-container {
+          img {
+            height: 5rem;
+            border-radius: 50%;
+          }
+          margin-top: 1rem;
+          p {
+            align-content: center;
+            font-size: 1.2rem;
+            color: black;
+            span {
+              font-size: 1rem;
+              color: var(--Grey-dark-2);
+            }
+          }
+        }
+        &__button {
+          color: var(--color-primary);
+          @include flex(center, center);
+          a {
+            font-size: 2rem;
+
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: currentColor;
+            transition: all 1s ease;
+            svg {
+              fill: currentColor;
+              margin-left: 0.5rem;
+              display: inline-block;
+            }
+          }
+          a:hover svg {
+            margin: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+}

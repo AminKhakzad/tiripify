@@ -1,0 +1,67 @@
+@import "../../node_modules/leaflet/dist/leaflet.css";
+
+.leaflet-popup-content {
+  margin: 0rem !important;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-width: 20rem;
+  font-size: 1rem;
+  @include responsive(1100px) {
+    min-width: 25rem;
+  }
+  @include responsive(700px) {
+    min-width: 28rem;
+  }
+}
+.leaflet-popup-content p {
+  margin: 0.1rem 0;
+}
+.cardM {
+  background-color: var(--Grey-light-1);
+
+  @include flex(unset, stretch);
+  height: 7rem;
+  width: 100%;
+  //   border-radius: 1.5rem;
+  overflow: hidden;
+  .cardM__img {
+    margin-right: 1rem;
+    width: 35%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cardM__introduction {
+    @include flex(center, unset);
+    flex-direction: column;
+    font-size: 1.1rem;
+    height: 100%;
+    h2 {
+      font-size: 1.3rem;
+    }
+    &__rating {
+      span {
+        margin-right: 0.6rem;
+      }
+      @include flex(unset, center);
+      svg {
+        height: 1.5rem;
+      }
+    }
+    // &__button {
+    //   align-self: flex-start;
+    //   padding: 0.5rem 2rem;
+    //   cursor: pointer;
+    //   text-decoration: none;
+    //   font-size: 0.5rem;
+    //   color: white;
+    //   border-radius: 2rem;
+    //   border: none;
+    //   background-color: var(--color-primary);
+    // }
+  }
+}

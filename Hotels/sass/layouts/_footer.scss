@@ -1,0 +1,46 @@
+footer {
+  height: 32rem;
+  width: 100%;
+  .footer-container {
+    background-color: var(--Grey-light-2);
+
+    @include flex(unset, center);
+    height: 25rem;
+    padding: 2rem;
+    img {
+      height: 100%;
+      width: 35%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+    .footer-introduction {
+      margin-left: 2rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+      p,
+      h3 {
+        font-size: 1.3rem;
+        margin: 1.5rem 0rem;
+      }
+      h3 {
+        opacity: 0;
+        @include responsive(900px) {
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+  .footer-navigation {
+    height: 7rem;
+    @include flex(center, center);
+    svg {
+      cursor: pointer;
+      margin: 0 4rem;
+    }
+    svg:hover {
+      fill: var(--color-primary);
+    }
+  }
+}
+

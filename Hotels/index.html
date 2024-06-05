@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
+    <script class="main-script" type="module" src="./js/controller.js"></script>
+
+    <title>Tripify &mdash; Your all-in-one booking app</title>
+  </head>
+  <body data-barba="wrapper">
+    <div class="main-container">
+      <header class="main-header">
+        <img src="../img/logo.png" alt="" id="logo" />
+        <div class="search">
+          <input
+            placeholder="Search hotels"
+            type="search"
+            class="search__input"
+          />
+
+          <svg
+            viewBox="0 0 50 50"
+            width="25"
+            height="100"
+            class="search__button"
+          >
+            <use xlink:href="../img/sprite.svg#icon-search" />
+          </svg>
+        </div>
+        <nav class="user-navigation">
+          <div class="icon-box icon-box-bookmark">
+            <svg viewBox="0 0 50 50" width="30">
+              <use xlink:href="../img/sprite.svg#icon-bookmark" />
+            </svg>
+            <span class="notification notification-bookmark">0</span>
+            <div class="bookmark-container">nothing</div>
+          </div>
+          <div class="icon-box buy-section">
+            <svg viewBox="0 0 50 50" width="30" height="100">
+              <use xlink:href="../img/sprite.svg#icon-shopping-cart" />
+            </svg>
+            <span class="notification notification-chat">0</span>
+          </div>
+          <div class="icon-box icon-box--user">
+            <img src="../img/user-1.jpg" alt="" />
+            <span>Amin</span>
+          </div>
+        </nav>
+      </header>
+      <main class="introduction">
+        <aside class="introduction__navigation">
+          <nav>
+            <ul class="navigation--list">
+              <li class="navigation--list__item active">
+                <a href="#" class="navigation--list__item--link">
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="20"
+                    height="100"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-home" />
+                  </svg>
+                  <span>HOTEL</span>
+                </a>
+              </li>
+              <li class="navigation--list__item">
+                <a href="#" class="navigation--list__item--link">
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="20"
+                    height="100"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-plane-outline" />
+                  </svg>
+                  <span>FLIGHT</span>
+                </a>
+              </li>
+              <li class="navigation--list__item">
+                <a href="#" class="navigation--list__item--link">
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="20"
+                    height="50"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-key" />
+                  </svg>
+                  <span>CAR RENTAL</span>
+                </a>
+              </li>
+              <li class="navigation--list__item">
+                <a href="#" class="navigation--list__item--link">
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="20"
+                    height="100"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-map" />
+                  </svg>
+                  <span>TOURS</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <p class="introduction__navigation--footer">
+            &COPY; 2024 by Amin Khakzad , All rights <br />
+            reserved.
+          </p>
+        </aside>
+        <div class="introduction__main" data-barba="container" data-barba-namespace="Hotels">
+          <div id="this-feature-is-not-developed">
+            <div>
+              <h1>
+                I am sorry dude but this project is just developed for
+                portofolio and it is not real App , <br />
+                so i did `n implement this feautre but you can be sure that i
+                can do that 😉
+              </h1>
+              <div class="animation-container">
+                <svg
+                  width="931"
+                  height="619"
+                  viewBox="0 0 931 619"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="Group 41">
+                    <path
+                      id="Rectangle 62"
+                      d="M823.939 282.375H120.363V616.234H823.939V282.375Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 75"
+                      d="M803.821 311.004H140.482V589.553H803.821V311.004Z"
+                      fill="white"
+                    />
+                    <path
+                      id="square1"
+                      d="M692.889 362.851H675.712V380.028H692.889V362.851Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 77"
+                      d="M234.72 362.851H217.543V380.028H234.72V362.851Z"
+                      fill="#6C63FF"
+                    />
+                    <path
+                      id="Rectangle 78"
+                      d="M274.304 412.053H217.046V469.311H274.304V412.053Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 80"
+                      d="M823.639 263.086H120.063V292.976H823.639V263.086Z"
+                      fill="#6C63FF"
+                    />
+                    <path
+                      id="Ellipse 90"
+                      d="M142.275 290.202C145.335 290.202 147.815 287.722 147.815 284.662C147.815 281.602 145.335 279.122 142.275 279.122C139.215 279.122 136.735 281.602 136.735 284.662C136.735 287.722 139.215 290.202 142.275 290.202Z"
+                      fill="white"
+                    />
+                    <path
+                      id="Ellipse 91"
+                      d="M163.303 290.202C166.363 290.202 168.843 287.722 168.843 284.662C168.843 281.602 166.363 279.122 163.303 279.122C160.243 279.122 157.763 281.602 157.763 284.662C157.763 287.722 160.243 290.202 163.303 290.202Z"
+                      fill="white"
+                    />
+                    <path
+                      id="Ellipse 92"
+                      d="M184.332 290.202C187.392 290.202 189.872 287.722 189.872 284.662C189.872 281.602 187.392 279.122 184.332 279.122C181.272 279.122 178.792 281.602 178.792 284.662C178.792 287.722 181.272 290.202 184.332 290.202Z"
+                      fill="white"
+                    />
+                    <path
+                      id="Rectangle 60"
+                      d="M931 616.235H0V618.235H931V616.235Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 81"
+                      d="M473.969 417.78H333.688V425.833H473.969V417.78Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 82"
+                      d="M550.313 447.154H333.688V455.207H550.313V447.154Z"
+                      fill="#6C63FF"
+                    />
+                    <path
+                      id="Rectangle 83"
+                      d="M510.232 474.827H333.688V482.88H510.232V474.827Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 84"
+                      d="M436.752 502.398H333.688V510.451H436.752V502.398Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Rectangle 85"
+                      d="M489.238 529.967H333.688V538.02H489.238V529.967Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="square2"
+                      d="M722.473 362.851H705.296V380.028H722.473V362.851Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="square3"
+                      d="M752.056 362.851H734.879V380.028H752.056V362.851Z"
+                      fill="#E6E6E6"
+                    />
+                    <path
+                      id="Ellipse 88"
+                      opacity="0.997"
+                      d="M717.171 510.45C736.437 510.45 752.055 494.832 752.055 475.566C752.055 456.3 736.437 440.682 717.171 440.682C697.905 440.682 682.287 456.3 682.287 475.566C682.287 494.832 697.905 510.45 717.171 510.45Z"
+                      fill="#6C63FF"
+                    />
+                    <g id="left-foot">
+                      <path
+                        id="Path 632"
+                        d="M63.91 366.612L47.504 361.463L59.556 295.728L83.77 303.328L63.91 366.612Z"
+                        fill="#FEB8B8"
+                      />
+                      <path
+                        id="Path 633"
+                        d="M37.246 353.1L68.8884 363.03L62.6362 382.953L11.0717 366.771C11.8928 364.155 13.2211 361.726 14.9809 359.623C16.7407 357.52 18.8974 355.784 21.328 354.515C23.7587 353.245 26.4155 352.467 29.1469 352.224C31.8782 351.982 34.6307 352.279 37.247 353.1L37.246 353.1Z"
+                        fill="#2F2E41"
+                      />
+                      <path
+                        id="Path 634"
+                        d="M69.505 340.145C68.7536 340.145 68.0084 340.009 67.305 339.745L54.65 335.002C53.2298 334.465 52.0499 333.435 51.3254 332.1C50.6009 330.765 50.3801 329.215 50.703 327.731C53.888 313.41 64.743 264.654 70.687 238.503C77.736 207.484 180.572 201.72 184.946 201.49L185.306 201.471L196.874 216.002C201.054 229.438 199.729 239.918 192.936 247.152C173.113 268.257 113.93 255.161 106.873 253.504L75.4181 336.081C74.9596 337.277 74.1494 338.305 73.0942 339.031C72.039 339.756 70.7886 340.145 69.508 340.145H69.505Z"
+                        fill="#626262"
+                      />
+                    </g>
+                    <g id="right-foot">
+                      <path
+                        id="Path 630"
+                        d="M80.0118 378.501L63.6346 373.245L76.1132 307.591L100.278 315.347L80.0118 378.501Z"
+                        fill="#FEB8B8"
+                      />
+                      <path
+                        id="Path 631"
+                        d="M50.881 370H84.044V390.881H30C30 385.343 32.2 380.032 36.1159 376.116C40.0319 372.2 45.343 370 50.881 370Z"
+                        fill="#2F2E41"
+                      />
+                      <path
+                        id="Path 635"
+                        d="M87.739 349.964C86.9876 349.964 86.2423 349.828 85.539 349.564L72.888 344.82C71.4676 344.283 70.2876 343.253 69.5631 341.918C68.8386 340.583 68.6178 339.033 68.941 337.549C72.126 323.228 82.981 274.472 88.925 248.321C95.974 217.302 198.81 211.538 203.184 211.308L203.544 211.289L215.108 225.824C219.288 239.26 217.963 249.74 211.17 256.974C191.348 278.074 132.164 264.983 125.107 263.325L93.648 345.899C93.1896 347.095 92.3793 348.123 91.3241 348.849C90.269 349.574 89.0186 349.963 87.738 349.963L87.739 349.964Z"
+                        fill="#626262"
+                      />
+                    </g>
+                    <path
+                      id="Path 637"
+                      d="M211.897 231.388C210.897 231.386 209.911 231.146 209.022 230.688C195.189 223.654 168.253 211.473 143.275 208.924C142.42 208.84 141.592 208.579 140.845 208.156C140.097 207.733 139.446 207.159 138.933 206.47C138.41 205.774 138.037 204.977 137.836 204.13C137.635 203.283 137.61 202.403 137.764 201.546C140.018 189.069 145.188 157.297 144.522 131.834C144.326 124.005 146.799 116.342 151.536 110.105C156.273 103.868 162.99 99.4278 170.585 97.515C175.156 96.309 179.798 95.3935 184.485 94.774C189.873 94.0917 195.346 94.6807 200.466 96.4939C205.585 98.3071 210.209 101.294 213.967 105.216C217.724 109.137 220.511 113.884 222.104 119.076C223.697 124.269 224.052 129.762 223.14 135.116C218.686 161.504 214.195 198.36 218.098 224.088C218.277 225.241 218.134 226.421 217.684 227.498C217.233 228.575 216.494 229.506 215.547 230.188C214.488 230.964 213.21 231.384 211.897 231.388Z"
+                      fill="#2F2E41"
+                    />
+                    <g id="left-hand">
+                      <path
+                        id="Path 636"
+                        d="M51.138 147.955C51.6026 148.577 52.0175 149.234 52.379 149.921L121.557 157.209L131.517 143.555L154.086 155.89L134.527 189.022L49.686 167.39C47.5455 169.477 44.8203 170.863 41.873 171.363C38.9257 171.863 35.8958 171.455 33.1865 170.191C30.4771 168.928 28.2166 166.869 26.7057 164.29C25.1947 161.71 24.5048 158.732 24.7279 155.751C24.9509 152.769 26.0762 149.927 27.9542 147.601C29.8321 145.275 32.3737 143.575 35.2409 142.729C38.1081 141.883 41.165 141.929 44.0051 142.863C46.8452 143.796 49.3338 145.572 51.14 147.954L51.138 147.955Z"
+                        fill="#FEB8B8"
+                      />
+                      <path
+                        id="Path 638"
+                        d="M145.803 164.27C144.941 164.269 144.088 164.091 143.297 163.747L125.276 155.947C123.741 155.28 122.533 154.032 121.917 152.476C121.301 150.92 121.328 149.184 121.991 147.647L135.921 115.468C136.748 113.518 137.952 111.75 139.463 110.265C140.973 108.781 142.762 107.608 144.725 106.814C146.689 106.02 148.79 105.621 150.908 105.64C153.027 105.658 155.12 106.093 157.07 106.921C159.02 107.748 160.788 108.952 162.273 110.462C163.758 111.973 164.931 113.761 165.724 115.725C166.518 117.689 166.917 119.79 166.899 121.908C166.881 124.026 166.445 126.12 165.618 128.07C165.588 128.141 165.557 128.212 165.526 128.282L151.596 160.462C151.106 161.592 150.296 162.553 149.267 163.23C148.238 163.906 147.034 164.268 145.803 164.27Z"
+                        fill="#2F2E41"
+                      />
+                    </g>
+                    <g id="head">
+                      <path
+                        id="Ellipse 97"
+                        d="M188.489 79.457C210.179 79.457 227.762 61.8739 227.762 40.184C227.762 18.4942 210.179 0.911041 188.489 0.911041C166.799 0.911041 149.216 18.4942 149.216 40.184C149.216 61.8739 166.799 79.457 188.489 79.457Z"
+                        fill="#2F2E41"
+                      />
+                      <path
+                        id="Ellipse 98"
+                        d="M187.054 83.8271C206.08 83.8271 221.504 68.4033 221.504 49.3771C221.504 30.3509 206.08 14.9271 187.054 14.9271C168.028 14.9271 152.604 30.3509 152.604 49.3771C152.604 68.4033 168.028 83.8271 187.054 83.8271Z"
+                        fill="#FEB8B8"
+                      />
+                      <path
+                        id="Path 639"
+                        d="M151.984 32.4481C168.302 42.4093 186.698 48.4709 205.741 50.1611L200.074 43.3721C204.2 44.8975 208.541 45.7595 212.937 45.9261C215.138 45.9899 217.323 45.5369 219.317 44.6034C221.312 43.67 223.059 42.2821 224.42 40.5511C225.531 38.7544 226.191 36.7156 226.344 34.6087C226.496 32.5018 226.137 30.3892 225.297 28.4511C223.57 24.5839 220.883 21.2229 217.49 18.6881C211.476 13.9307 204.379 10.7351 196.83 9.38604C189.282 8.03696 181.516 8.57633 174.227 10.9561C169.227 12.4504 164.748 15.3231 161.305 19.2451C158.039 23.2741 151.752 26.8641 153.424 31.7731L151.984 32.4481Z"
+                        fill="#2F2E41"
+                      />
+                    </g>
+                    <g id="right-hand">
+                      <path
+                        id="Path 641"
+                        d="M129.135 222.538C126.852 222.535 124.599 222.026 122.537 221.048C120.475 220.069 118.655 218.645 117.209 216.879C115.764 215.112 114.728 213.047 114.176 210.832C113.625 208.617 113.571 206.308 114.02 204.07C114.469 201.832 115.408 199.721 116.771 197.89C118.133 196.058 119.885 194.552 121.9 193.479C123.914 192.406 126.142 191.794 128.422 191.685C130.702 191.577 132.978 191.976 135.085 192.853C135.719 193.121 136.333 193.432 136.924 193.785L199.679 165.614L201.442 148.594L228.493 147.87L228.314 176.205C228.281 179.488 227.191 182.673 225.204 185.286C223.218 187.9 220.441 189.804 217.287 190.714L143.902 211.599C143.76 212.084 143.594 212.561 143.402 213.028C142.225 215.84 140.243 218.243 137.707 219.934C135.17 221.626 132.191 222.531 129.142 222.537L129.135 222.538Z"
+                        fill="#FEB8B8"
+                      />
+                      <path
+                        id="Path 642"
+                        d="M226.202 161.754C225.433 162.143 224.592 162.371 223.731 162.422L204.131 163.627C202.461 163.728 200.819 163.162 199.565 162.054C198.312 160.945 197.549 159.385 197.444 157.715L195.293 122.715C195.035 118.448 196.482 114.253 199.315 111.052C202.149 107.851 206.137 105.905 210.404 105.643C214.67 105.38 218.867 106.822 222.071 109.652C225.276 112.481 227.226 116.467 227.493 120.734L229.645 155.734C229.72 156.963 229.434 158.188 228.823 159.257C228.211 160.327 227.301 161.194 226.204 161.754H226.202Z"
+                        fill="#2F2E41"
+                      />
+                    </g>
+                    <path
+                      id="Rectangle 91"
+                      d="M186.735 216.258H69.666C68.684 216.258 67.888 217.054 67.888 218.036V224.298C67.888 225.28 68.684 226.076 69.666 226.076H186.735C187.717 226.076 188.513 225.28 188.513 224.298V218.036C188.513 217.054 187.717 216.258 186.735 216.258Z"
+                      fill="#A0A0A0"
+                    />
+                    <path
+                      id="Path 643"
+                      d="M22.905 216.96V148.231C22.9079 145.814 23.8694 143.497 25.5786 141.788C27.2877 140.078 29.6049 139.117 32.022 139.114H156.855C159.272 139.117 161.59 140.078 163.299 141.787C165.008 143.497 165.969 145.814 165.972 148.231V216.96C165.969 219.377 165.008 221.695 163.299 223.404C161.59 225.113 159.272 226.074 156.855 226.077H32.022C29.6049 226.074 27.2877 225.113 25.5786 223.404C23.8694 221.694 22.9079 219.377 22.905 216.96Z"
+                      fill="#A0A0A0"
+                    />
+                    <path
+                      id="Ellipse 99"
+                      d="M95.94 191.015C100.588 191.015 104.356 187.247 104.356 182.599C104.356 177.951 100.588 174.183 95.94 174.183C91.292 174.183 87.524 177.951 87.524 182.599C87.524 187.247 91.292 191.015 95.94 191.015Z"
+                      fill="white"
+                    />
+                  </g>
+                </svg>
+                <span class="close">X</span>
+              </div>
+            </div>
+          </div>
+          <!-- OFFERS -->
+          <!-- OFFERS -->
+          <!-- OFFERS -->
+          <div class="offers">
+            <div class="offers__tilte">
+              <h1>offers</h1>
+              <p>Promotions , Deals , and special offers for you.</p>
+            </div>
+            <span class="previous-offer offer-navigation hidden">
+              <svg
+                viewBox="0 0 50 50"
+                width="20"
+                height="50"
+                class="item--link__icon"
+              >
+                <use xlink:href="../img/sprite.svg#icon-chevron-left" />
+              </svg>
+            </span>
+            <span class="next-offer offer-navigation">
+              <svg
+                viewBox="0 0 50 50"
+                width="20"
+                height="50"
+                class="item--link__icon"
+              >
+                <use xlink:href="../img/sprite.svg#icon-chevron-right" />
+              </svg>
+            </span>
+            <div class="offers__card-container">
+              <div class="offers__card offers__card-1">
+                <div class="offers__card-introduction">
+                  <h2>Fly away to your dream vacation</h2>
+                  <p>
+                    Get inspired - compare and book flights with flexibility
+                  </p>
+                  <button>
+                    <a href="../Hotels--item/index.html">
+                      Search for flights
+                    </a>
+                  </button>
+                </div>
+                <div class="offers__card-image">
+                  <img src="../img/hotel_img/offers-1.png" alt="" />
+                </div>
+              </div>
+              <div class="offers__card offers__card-2">
+                <div class="offers__card-introduction">
+                  <h2>Planning a trip to the 2024 Summer Games?</h2>
+                  <p>Brussels is a quick train ride from all the action</p>
+                  <button>
+                    <a href="../Hotels--item/index.html"> Explore Brussels</a>
+                  </button>
+                </div>
+                <div class="offers__card-image">
+                  <img src="../img/hotel_img/offers-2.png" alt="" />
+                </div>
+              </div>
+              <div class="offers__card offers__card-3">
+                <div class="offers__card-introduction">
+                  <h2>Seize the moment!</h2>
+                  <p>
+                    Save 15% or more when you book and stay before October 1,
+                    2024
+                  </p>
+                  <button>
+                    <a href="../Hotels--item/index.html"> Find Getway Deals</a>
+                  </button>
+                </div>
+                <div class="offers__card-image">
+                  <img src="../img/hotel_img/offers-3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- TRIP IDEA -->
+          <!-- TRIP IDEA -->
+          <!-- TRIP IDEA -->
+          <div class="trip-idea">
+            <h1 class="trip-idea__title">Ideas for your next trip</h1>
+            <div class="trip-idea__container">
+              <div class="trip-idea__container-1">
+                <figure class="trip-idea--1 trip-figure">
+                  <img
+                    src="../img/hotel_img/trip-idea--1.jpg"
+                    alt="photo of city"
+                  />
+                  <figcaption>
+                    <p>Simple staycations</p>
+                    Rediscovere your own city with local escape -- a great way
+                    to get away while staying close to home .
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="trip-idea__container-2">
+                <figure class="trip-idea--2 trip-figure">
+                  <img
+                    src="../img/hotel_img/trip-idea--2.jpg"
+                    alt="photo of man"
+                  />
+                  <figcaption>
+                    <p>Book 60 days in advance for 20% off select stay</p>
+                    book early and save
+                  </figcaption>
+                </figure>
+                <figure class="trip-idea--2 trip-figure">
+                  <img
+                    src="../img/hotel_img/trip-idea--2-1.jpg"
+                    alt="photo of man"
+                  />
+                  <figcaption>
+                    <p>
+                      Last miniute deal are <br />
+                      avilable
+                    </p>
+                    find your next getway
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <!-- LOCATION SEARCH -->
+          <!-- LOCATION SEARCH -->
+          <!-- LOCATION SEARCH -->
+          <div class="location-search">
+            <h2 class="location-search__title">Where to ?</h2>
+            <div class="location-search__filters">
+              <div class="filter-location filter-container">
+                <svg
+                  viewBox="0 0 50 50"
+                  width="20"
+                  height="50"
+                  class="item--link__icon"
+                >
+                  <use xlink:href="../img/sprite.svg#icon-map-pin" />
+                </svg>
+                <p>going to</p>
+              </div>
+              <div class="filter-date filter-container">
+                <svg
+                  viewBox="0 0 50 50"
+                  width="20"
+                  height="50"
+                  class="item--link__icon"
+                >
+                  <use xlink:href="../img/sprite.svg#icon-calendar" />
+                </svg>
+
+                <p><span>dates</span> <br />9 May - 11 May</p>
+              </div>
+              <div class="filter-travellers filter-container">
+                <svg
+                  viewBox="0 0 50 50"
+                  width="20"
+                  height="50"
+                  class="item--link__icon"
+                >
+                  <use xlink:href="../img/sprite.svg#icon-user" />
+                </svg>
+                <p><span>traveller</span> <br />2 travellers - 1 room</p>
+              </div>
+              <button class="filter__search-btn">search</button>
+            </div>
+          </div>
+
+          <!-- HOTELS LIST AND MAP  -->
+          <!-- HOTELS LIST AND MAP  -->
+          <!-- HOTELS LIST AND MAP  -->
+          <div class="hotels">
+            <div class="hotels__list">
+              <div class="hotels__list__filter">
+                <label for="hotles-sort">Sort by</label>
+                <select id="hotles-sort">
+                  <option value="recommendations">our recommendations</option>
+                  <option value="price">with better price</option>
+                  <option value="rating">with better rating</option>
+                </select>
+              </div>
+              <div class="hotels__list__cards"></div>
+              <div class="hotels__list__pages">
+                <button data-page="1" class="pervious-page page hidden">
+                  <svg
+                    viewBox="0 0 10 10"
+                    width="30"
+                    height="10"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-chevron-left" />
+                  </svg>
+                  <span>1</span>
+                </button>
+                <button class="show-map">
+                  SHOW IN MAP
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="20"
+                    height="50"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-map" />
+                  </svg>
+                </button>
+                <button data-page="2" class="next-page page">
+                  <span>2</span>
+                  <svg
+                    viewBox="0 0 50 50"
+                    width="30"
+                    height="50"
+                    class="item--link__icon"
+                  >
+                    <use xlink:href="../img/sprite.svg#icon-chevron-right" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="hotels__map">
+              <div id="map">map</div>
+            </div>
+          </div>
+          <!-- FOOTER  -->
+          <!-- FOOTER  -->
+          <!-- FOOTER  -->
+          <footer>
+            <div class="footer-container">
+              <img src="../img/hotel_img/footer-img.jpg" alt="" />
+              <div class="footer-introduction">
+                <h2>Go further with the Tripify</h2>
+                <p>
+                  Save on select hotels and earn double points when you book on
+                  the app. Our app deals help you to save on trips so you can
+                  travel more and manage it all on the go.
+                </p>
+                <h3>&COPY; 2024 by Amin Khakzad , All rights reserved.</h3>
+              </div>
+            </div>
+            <div class="footer-navigation">
+              <svg
+                viewBox="0 0 50 50"
+                width="25"
+                height="100"
+                class="search__button"
+              >
+                <use xlink:href="../img/sprite.svg#icon-instagram" />
+              </svg>
+              <svg
+                viewBox="0 0 50 50"
+                width="25"
+                height="100"
+                class="search__button"
+              >
+                <use xlink:href="../img/sprite.svg#icon-linkedin" />
+              </svg>
+              <svg
+                viewBox="0 0 50 50"
+                width="25"
+                height="100"
+                class="search__button"
+              >
+                <use xlink:href="../img/sprite.svg#icon-github" />
+              </svg>
+              <svg
+                viewBox="0 0 50 50"
+                width="25"
+                height="100"
+                class="search__button"
+              >
+                <use xlink:href="../img/sprite.svg#icon-facebook" />
+              </svg>
+            </div>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

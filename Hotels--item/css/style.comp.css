@@ -1,0 +1,53 @@
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba256d;
+  --Grey-light-1: #faf9f9;
+  --Grey-light-2: #f4f2f2;
+  --Grey-light-3: #f0eeee;
+  --Grey-light-4: #ccc;
+  --Grey-dark-1: #333;
+  --Grey-dark-2: #777;
+  --Grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  min-height: 100vh; }
+
+h1 {
+  font-size: 5rem; }
+
+.main-container {
+  background-color: var(--Grey-light-2);
+  max-width: 80vw;
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark); }
+
+.main-header {
+  background-color: var(--Grey-dark-3);
+  height: 7rem; }
+
+.introduction {
+  min-height: 100rem;
+  display: flex; }
+  .introduction__navigation {
+    flex: 0 0 18%;
+    min-height: 100%; }
+  .introduction__main {
+    background-color: var(--Grey-dark-1);
+    flex: 1;
+    min-height: 100%;
+    color: white; }

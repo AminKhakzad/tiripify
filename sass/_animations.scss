@@ -1,0 +1,47 @@
+@keyframes hotel-location__button {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+  }
+}
+
+@keyframes footer__button {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+    padding: 3.3rem 13rem;
+    border-radius: 3.5rem;
+  }
+}
+
+@keyframes hands {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+@keyframes foot {
+  from {
+    transform: rotate(0deg) translateY(0);
+  }
+  to {
+    transform: rotate(-5deg) translateY(-2%);
+  }
+}
+@keyframes squares {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+}

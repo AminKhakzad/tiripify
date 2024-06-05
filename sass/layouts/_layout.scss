@@ -1,0 +1,35 @@
+.main-container {
+  background-color: var(--Grey-light-2);
+  max-width: 130rem;
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark);
+  @include responsive(1200px) {
+    margin: 0;
+    min-width: 100vw;
+  }
+}
+
+.main-header {
+  width: 100%;
+  background-color: var(--Grey-light-1);
+  height: 7rem;
+}
+
+.introduction {
+  width: 100%;
+  // min-height: 100rem;
+  display: flex;
+  @include responsive(900px) {
+    flex-direction: column;
+  }
+  &__navigation {
+    flex: 0 0 18%;
+    min-height: 100%;
+  }
+  &__main {
+    background-color: var(--Grey-light-3);
+    flex: 1;
+    min-height: 100%;
+    color: black;
+  }
+}
